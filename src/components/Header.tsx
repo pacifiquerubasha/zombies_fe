@@ -15,7 +15,7 @@ import { colors } from "../assets/colors";
 import { AppContext } from "../AppContext";
 
 const Header = () => {
-  const { user, setUser } = useContext(AppContext);
+  const { user } = useContext(AppContext);
 
   const [showMobileNav, setShowMobileNav] = useState(false);
   const [isFixed, setIsFixed] = useState(false);
