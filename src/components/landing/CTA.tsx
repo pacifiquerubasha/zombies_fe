@@ -24,11 +24,11 @@ const CTA = () => {
         top={0}
       />
       <a
-        href="https://bff.ecoindex.fr/redirect/?url=https://teamakatsuki.maurice.webcup.hodi.host/"
+        href="https://bff.ecoindex.fr/redirect/?url=https://humaanize.netlify.app/"
         target="_blank"
       >
         <img
-          src="https://bff.ecoindex.fr/badge/?theme=dark&url=https://teamakatsuki.maurice.webcup.hodi.host/"
+          src="https://bff.ecoindex.fr/badge/?theme=dark&url=https://humaanize.netlify.app/"
           alt="Ecoindex Badge"
         />
       </a>

@@ -22,6 +22,7 @@ const CinematicStudies = () => {
                 h={200}
                 objectFit={"cover"}
                 borderTopRadius={10}
+                loading="lazy"
                 />
                 <Text fontSize={12} pos={'absolute'} bottom={2} right={2} bg={colors.black} px={2} py={1} borderRadius={5} color={'rgba(255, 255, 255, 0.5)'}>25:00</Text>
             </Box>

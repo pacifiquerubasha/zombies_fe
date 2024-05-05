@@ -1,9 +1,13 @@
 import { Box, Button, Flex, Image, Stack, Text } from "@chakra-ui/react";
 import { colors } from "../../assets/colors";
-import { sampleCourses } from "../../utils/sample_data";
 import { NavLink } from "react-router-dom";
+import { courses_data } from "../../utils/courses_data";
 
 const SampleCourses = () => {
+
+
+
+
   return (
     <Stack
       px={{ base: "5%", lg: "10%" }}
@@ -29,7 +33,7 @@ const SampleCourses = () => {
         flexWrap={{ base: "wrap", lg: "nowrap" }}
         gap={{ base: 10, lg: 0 }}
       >
-        {sampleCourses.map((program, i) => (
+        {courses_data.slice(0, 4).map((program, i) => (
           <Box
             data-aos="fade-up"
             data-aos-easing="ease-in-sine"
@@ -41,11 +45,12 @@ const SampleCourses = () => {
             pos={"relative"}
           >
             <Image
-              src={"/zombie2.webp"}
+              src={program.image || "/zombie2.webp"}
               alt="Jamii"
               width={"100%"}
               height={"100%"}
               objectFit={"cover"}
+              loading="lazy"
             />
             <Stack
               pos={"absolute"}
@@ -73,10 +78,10 @@ const SampleCourses = () => {
                 data-aos="fade-up"
                 data-aos-easing="ease-in-sine"
                 fontSize={16}
-                noOfLines={5}
+                noOfLines={2}
                 mb={5}
               >
-                {program.short}
+                {program.shortDesc}
               </Text>
               <Button
                 bg={colors.green}
@@ -85,7 +90,7 @@ const SampleCourses = () => {
                 data-aos="fade-up"
                 data-aos-easing="ease-in-sine"
                 as={NavLink}
-                to={`/programs/${program.title
+                to={`/courses/${program.title
                   ?.toLowerCase()
                   .replace(/ /g, "-")}`}
               >

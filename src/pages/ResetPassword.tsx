@@ -74,7 +74,7 @@ const ResetPassword: React.FC<{}> = ()=>{
                             src="/brain.svg"
                             alt="Humanize"
                             w={{base:20, xl:40}}
-                    
+                            loading="lazy"
                         />
                     </Box>
                     <Stack mb={5} align={{base:'center', md:'flex-start'}}>
@@ -147,7 +147,8 @@ const ResetPassword: React.FC<{}> = ()=>{
                         <Image
                             src='/brain.svg'
                             alt='Justpick'  
-                            width={'100%'}                  
+                            width={'100%'}
+                            loading="lazy"                  
                         />
                     </Box>
 

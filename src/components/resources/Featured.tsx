@@ -13,6 +13,7 @@ const Featured = () => {
           width={{base:"100%", md:"50%"}}
           height={360}
           objectFit={"cover"}
+          loading="lazy"
         />
         <Stack flex={1} px={{base:0, md:"5%"}} mt={{base:10, md:0}} justify={"center"} align={"flex-start"}>
           <Text>FEATURED</Text>

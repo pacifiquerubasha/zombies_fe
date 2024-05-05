@@ -84,7 +84,7 @@ const Login: React.FC<{}> = ()=>{
                             src="/brain.svg"
                             alt="Humanize"
                             w={{base:20, xl:40}}
-                            
+                            loading="lazy"
                         />
                     </Box>
                     <Stack mb={{base:5, md:10}} align={'center'}>

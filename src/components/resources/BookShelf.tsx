@@ -17,6 +17,7 @@ const BookShelf = () => {
                             objectFit={"cover"}
                             borderTopRadius={10}
                             mb={2}
+                            loading="lazy"
                         />
                         <Text fontSize={14} color={colors.red}>Book Title</Text>
                         <Text fontSize={12}>Author</Text>

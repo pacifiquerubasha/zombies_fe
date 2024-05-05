@@ -37,6 +37,7 @@ const PersonalSpace = () => {
                   src={user?.imageUrl || ""}
                   name={user?.userName}
                   size={{base:"md", md:'xl'}}
+                  loading="lazy"
                 />
               </Box>
               <Box>

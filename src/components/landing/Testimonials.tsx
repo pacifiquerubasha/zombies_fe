@@ -40,6 +40,7 @@ const Testimonials = () => {
                     size="md"
                     name={testimonial.name}
                     ml={-2}
+                    loading="lazy"
                   />
                   <Stack gap={0} fontSize={14}>
                     <Text fontWeight={700}>{testimonial.name}</Text>

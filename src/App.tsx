@@ -1,18 +1,19 @@
 import './App.css'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
-import { useEffect, useState } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 import { AppContext } from './AppContext'
-import Resources from './pages/Resources'
-import Courses from './pages/Courses'
-import CourseDetails from './pages/CourseDetails'
-import PersonalSpace from './pages/PersonalSpace'
-import Login from './pages/Login'
-import Register from './pages/Register'
-import ForgotPassword from './pages/ForgotPassword'
-import ResetPassword from './pages/ResetPassword'
+import { Spinner, Stack } from '@chakra-ui/react'
+const Resources = React.lazy(() => import('./pages/Resources'));
+const Courses = React.lazy(() => import('./pages/Courses'));
+const CourseDetails = React.lazy(() => import('./pages/CourseDetails'));
+const PersonalSpace = React.lazy(() => import('./pages/PersonalSpace'));
+const Login = React.lazy(() => import('./pages/Login'));
+const Register = React.lazy(() => import('./pages/Register'));
+const ForgotPassword = React.lazy(() => import('./pages/ForgotPassword'));
+const ResetPassword = React.lazy(() => import('./pages/ResetPassword'));
 
 interface Props{
   children: React.ReactNode;
@@ -45,23 +46,33 @@ function App() {
   
   }
 
+  const FallBack = () => {
+    return (
+      <Stack w={'100%'} h={'100vh'} justify={'center'} align={'center'}>
+        <Spinner size={'xl'}/>
+      </Stack>
+    )
+  }
+
   return (
     <AppContext.Provider value={values}>
-      <BrowserRouter>
-        <RoutesWrapper>
-          <Route path='/' element={<Home/>} />
-          <Route path='/courses' element={<Courses/>} />
-          <Route path='/courses/:id' element={<CourseDetails/>} />
-          <Route path='/additional-resources' element={<Resources/>} />
-          <Route path='/personnal-space' element={<PersonalSpace/>} />
+      <Suspense fallback={<FallBack/>}>
+        <BrowserRouter>
+          <RoutesWrapper>
+            <Route path='/' element={<Home/>} />
+            <Route path='/courses' element={<Courses/>} />
+            <Route path='/courses/:id' element={<CourseDetails/>} />
+            <Route path='/additional-resources' element={<Resources/>} />
+            <Route path='/personnal-space' element={<PersonalSpace/>} />
 
-          <Route path='/login' element={<Login/>} />
-          <Route path='/register' element={<Register/>} />
-          <Route path='/forgot-password' element={<ForgotPassword/>} />
-          <Route path='/reset-password/:code' element={<ResetPassword/>} />
+            <Route path='/login' element={<Login/>} />
+            <Route path='/register' element={<Register/>} />
+            <Route path='/forgot-password' element={<ForgotPassword/>} />
+            <Route path='/reset-password/:code' element={<ResetPassword/>} />
 
-        </RoutesWrapper>      
-      </BrowserRouter>
+          </RoutesWrapper>      
+        </BrowserRouter>
+      </Suspense>
     </AppContext.Provider>
   )
 }

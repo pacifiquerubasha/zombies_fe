@@ -34,11 +34,12 @@ const Footer = () => {
       >
         <Stack w={{base:360, md:"40%"}} maxW={'100%'} align={"flex-start"}>
           <Flex align={"center"}>
-            <Image src="/brain.svg" alt="Humanize" w={84} cursor={"pointer"} />
+            <Image src="/brain.svg" alt="Humanize" w={84} cursor={"pointer"} loading="lazy"/>
             <Text
               fontSize={{ base: 18, md: 24, lg: 32 }}
               color={colors.brown}
               fontWeight={900}
+              
             >
               Humanize
             </Text>

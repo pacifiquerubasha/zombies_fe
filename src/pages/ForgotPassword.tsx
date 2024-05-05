@@ -59,6 +59,7 @@ const ForgotPassword: React.FC<{}> = ()=>{
                             src="/brain.svg"
                             alt="Humanize"
                             w={{base:20, xl:40}}
+                            loading="lazy"
                     
                         />
                     </Box>

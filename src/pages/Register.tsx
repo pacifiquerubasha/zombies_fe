@@ -129,7 +129,7 @@ const Register: React.FC<{}> = () => {
             as={NavLink}
             to={"/"}
           >
-            <Image src="/brain.svg" alt="Humanize" w={{ base: 20, xl: 40 }} />
+            <Image src="/brain.svg" alt="Humanize" w={{ base: 20, xl: 40 }} loading="lazy"/>
           </Box>
           <Stack mb={{ base: 5, md: 10 }} align={"center"}>
             <Text fontSize={{ base: 22, md: 32, lg: 40 }}>
@@ -311,7 +311,7 @@ const Register: React.FC<{}> = () => {
           justify={"center"}
         >
           <Box as={NavLink} to={"/"} width={"50%"}>
-            <Image src="/brain.svg" alt="Justpick" width={"100%"} />
+            <Image src="/brain.svg" alt="Justpick" width={"100%"} loading="lazy"/>
           </Box>
         </Stack>
       </Flex>

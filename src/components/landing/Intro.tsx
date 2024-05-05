@@ -21,6 +21,7 @@ const Intro = () => {
         objectPosition={"center"}
         borderRadius={16}
         marginLeft={{ base: 0, md: "5%", lg: "10%" }}
+        loading="lazy"
       />
       <Box
         pos={{md:"absolute"}}
@@ -41,6 +42,7 @@ const Intro = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           title="Embedded youtube"
+          loading="lazy"
         />
       </Box>
     </Flex>

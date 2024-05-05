@@ -53,6 +53,7 @@ const Header = () => {
           alt="Humanize"
           w={{ base: 20, md: 24, lg: 36 }}
           cursor={"pointer"}
+          
         />
         <Text
           fontSize={{ base: 20, md: 28, lg: 36 }}

@@ -35,6 +35,7 @@ const Objectives = () => {
                 alt={"Humanity"}
                 w={"64px"}
                 cursor={"pointer"}
+                loading="lazy"
               />
               <Box>
                 <Text
@@ -61,6 +62,7 @@ const Objectives = () => {
                 alt={"Humanity"}
                 w={"64px"}
                 cursor={"pointer"}
+                loading="lazy"
               />
               <Box>
                 <Text
@@ -160,6 +162,7 @@ const Objectives = () => {
                 alt={"Humanity"}
                 w={"64px"}
                 cursor={"pointer"}
+                loading="lazy"
               />
               <Stack align={"flex-end"}>
                 <Text
@@ -189,6 +192,7 @@ const Objectives = () => {
                 alt={"Humanity"}
                 w={"64px"}
                 cursor={"pointer"}
+                loading="lazy"
               />
               <Stack align={"flex-end"}>
                 <Text
