@@ -6,7 +6,16 @@ import { colors } from "../../assets/colors";
 const Objectives = () => {
   return (
     <Box className="section__boxes" color={colors.brown}>
-      <Text textAlign={'center'} mx={'auto'} fontSize={48} mb={32} fontWeight={700}>The Undead Agenda</Text>
+      <Text
+        textAlign={"center"}
+        mx={"auto"}
+        fontSize={{ base: 32, lg: 36 }}
+        mb={{ base: 10, md: 32 }}
+        fontWeight={700}
+        color={colors.red}
+      >
+        The Undead Agenda
+      </Text>
       <Flex
         align={"center"}
         justify={"center"}
@@ -15,15 +24,25 @@ const Objectives = () => {
       >
         <Flex>
           <Stack justify={"space-between"} w={"50%"} className="boxes__col">
-            <Flex data-aos="fade-right" data-aos-easing="ease-in-sine" align={"center"} gap={"1rem"} className="">
+            <Flex
+              data-aos="fade-right"
+              data-aos-easing="ease-in-sine"
+              align={"center"}
+              gap={"1rem"}
+              className=""
+            >
               <Image
                 src={"/human.png"}
                 alt={"Humanity"}
-                w={'64px'}
+                w={"64px"}
                 cursor={"pointer"}
               />
               <Box>
-                <Text color={colors.red} fontWeight={900} fontSize={32}>
+                <Text
+                  color={colors.red}
+                  fontWeight={900}
+                  fontSize={{ base: 18, md: 24, lg: 32 }}
+                >
                   Adopt Humanity
                 </Text>
                 <Text w={"50%"}>
@@ -31,15 +50,25 @@ const Objectives = () => {
                 </Text>
               </Box>
             </Flex>
-            <Flex data-aos="fade-right" data-aos-easing="ease-in-sine" align={"center"} gap={"1rem"} className="">
+            <Flex
+              data-aos="fade-right"
+              data-aos-easing="ease-in-sine"
+              align={"center"}
+              gap={"1rem"}
+              className=""
+            >
               <Image
                 src={"/culture.png"}
                 alt={"Humanity"}
-                w={'64px'}
+                w={"64px"}
                 cursor={"pointer"}
               />
               <Box>
-                <Text color={colors.red} fontWeight={900} fontSize={32}>
+                <Text
+                  color={colors.red}
+                  fontWeight={900}
+                  fontSize={{ base: 18, md: 24, lg: 32 }}
+                >
                   Understand Culture
                 </Text>
                 <Text w={"50%"}>
@@ -50,10 +79,21 @@ const Objectives = () => {
             </Flex>
           </Stack>
 
-          <Flex data-aos="zoom-in" data-aos-easing="ease-in-sine" justify={"center"} align={"center"} className="boxes__center">
+          <Flex
+            data-aos="zoom-in"
+            data-aos-easing="ease-in-sine"
+            justify={"center"}
+            align={"center"}
+            className="boxes__center"
+          >
             <Stack align={"center"} gap={"1rem"}>
               <Box className="square">
-                <Text as={"span"} opacity={0.5} fontWeight={900} fontSize={48}>
+                <Text
+                  as={"span"}
+                  opacity={0.5}
+                  fontWeight={900}
+                  fontSize={{ base: 24, md: 32, lg: 36 }}
+                >
                   01
                 </Text>
               </Box>
@@ -63,7 +103,7 @@ const Objectives = () => {
                     as={"span"}
                     opacity={0.5}
                     fontWeight={900}
-                    fontSize={48}
+                    fontSize={{ base: 24, md: 32, lg: 36 }}
                   >
                     02
                   </Text>
@@ -75,7 +115,8 @@ const Objectives = () => {
                   textAlign={"center"}
                   align={"center"}
                   className="square sq__center text-xl"
-                  data-aos="zoom-in" data-aos-easing="ease-in-sine"
+                  data-aos="zoom-in"
+                  data-aos-easing="ease-in-sine"
                   data-aos-duraton="9000"
                 >
                   HUMAN <br />
@@ -86,14 +127,19 @@ const Objectives = () => {
                     as={"span"}
                     opacity={0.5}
                     fontWeight={900}
-                    fontSize={48}
+                    fontSize={{ base: 24, md: 32, lg: 36 }}
                   >
                     03
                   </Text>
                 </Box>
               </Flex>
               <Box className="square sq__bottom">
-                <Text as={"span"} opacity={0.5} fontWeight={900} fontSize={48}>
+                <Text
+                  as={"span"}
+                  opacity={0.5}
+                  fontWeight={900}
+                  fontSize={{ base: 24, md: 32, lg: 36 }}
+                >
                   04
                 </Text>
               </Box>
@@ -107,16 +153,21 @@ const Objectives = () => {
               align={"center"}
               gap={"1rem"}
               textAlign={"right"}
-              data-aos="fade-left" data-aos-easing="ease-in-sine"
+              data-aos="fade-left"
+              data-aos-easing="ease-in-sine"
             >
               <Image
                 src={"/law.png"}
                 alt={"Humanity"}
-                w={'64px'}
+                w={"64px"}
                 cursor={"pointer"}
               />
               <Stack align={"flex-end"}>
-                <Text color={colors.red} fontWeight={900} fontSize={32}>
+                <Text
+                  color={colors.red}
+                  fontWeight={900}
+                  fontSize={{ base: 18, md: 24, lg: 32 }}
+                >
                   Know Laws
                 </Text>
                 <Text w={"50%"}>
@@ -131,20 +182,25 @@ const Objectives = () => {
               align={"center"}
               gap={"1rem"}
               textAlign={"right"}
-              data-aos="fade-left" data-aos-easing="ease-in-sine"
+              data-aos="fade-left"
+              data-aos-easing="ease-in-sine"
             >
               <Image
                 src={"/job.png"}
                 alt={"Humanity"}
-                w={'64px'}
+                w={"64px"}
                 cursor={"pointer"}
               />
               <Stack align={"flex-end"}>
-                <Text color={colors.red} fontWeight={900} fontSize={32}>
+                <Text
+                  color={colors.red}
+                  fontWeight={900}
+                  fontSize={{ base: 18, md: 24, lg: 32 }}
+                >
                   Gain Employment
                 </Text>
                 <Text w={"50%"}>
-                    Develop much-needed professional skills for workplace success.
+                  Develop much-needed professional skills for workplace success.
                 </Text>
               </Stack>
             </Flex>

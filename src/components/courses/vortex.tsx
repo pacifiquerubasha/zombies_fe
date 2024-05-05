@@ -1,7 +1,6 @@
 import React from "react";
-import { Vortex } from "./ui/hero";
 
-export function VortexDemo() {
+function VortexDemo() {
   const handleClick = () => {
     const element = document.getElementById("Social");
     if (element) {
@@ -27,8 +26,7 @@ export function VortexDemo() {
   return (
     <>
       <div className="w-full mx-auto h-screen overflow-hidden">
-        <Vortex
-          backgroundColor="black"
+        <div
           className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-full"
         >
           <h2 className="text-white text-2xl md:text-6xl font-bold text-center">
@@ -45,7 +43,7 @@ export function VortexDemo() {
               PROCEED
             </button>
           </div>
-        </Vortex>
+        </div>
       </div>
       <section className="bg-black py-16" id="Social">
         <div className="container mx-auto px-4">
@@ -59,7 +57,6 @@ export function VortexDemo() {
                   <img className="w-full h-40 sm:h-48 object-fit" src={card.imageUrl} alt={card.title} />
                   <div className="p-4">
                     <h3 className="text-lg font-semibold text-center">{card.title}</h3>
-                    {/* Add additional content if needed */}
                   </div>
                 </div>
               </a>
