@@ -1,4 +1,3 @@
-import {  Flex, Stack, Text, Wrap } from '@chakra-ui/react';
 import Layout from '../components/Layout';
 import Hero from '../components/courses/Hero';
 import PopularCourses from '../components/courses/PopularCourses';
