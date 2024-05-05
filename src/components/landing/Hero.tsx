@@ -30,10 +30,10 @@ const Hero = () => {
           top={0}
         />
         <Stack gap={7} px={{base:"5%", lg:"10%"}} pb={"5%"} align={"flex-start"} mt={"auto"}>
-          <Text fontSize={{base:36, md:48, lg:56, "2xl":72}} fontWeight={500}>
+          <Text data-aos="fade-up" data-aos-easing="ease-in-sine" fontSize={{base:36, md:48, lg:56, "2xl":72}} fontWeight={500}>
             Zombies Gone <Text fontWeight={900}>Humaaan</Text>
           </Text>
-          <Text w={{base:"100%", md:"75%", lg:"60%"}} fontSize={{base:18, md:20, lg:22, "2xl":24}}>
+          <Text data-aos="fade-up" data-aos-easing="ease-in-sine" w={{base:"100%", md:"75%", lg:"60%"}} fontSize={{base:18, md:20, lg:22, "2xl":24}}>
             Revive Your Existence: The ultimate guide for reanimated creatures
             longing for a human life. Transform from the undead to the living
             with our crash course for a fresh start.
@@ -49,6 +49,7 @@ const Hero = () => {
             _hover={{ bg: colors.black }}
             as={NavLink}
             to={'/courses'}
+            data-aos="fade-up" data-aos-easing="ease-in-sine"
           >
             Rise and Thrive
           </Button>

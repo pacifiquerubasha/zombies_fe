@@ -84,7 +84,7 @@ const Hero: React.FC<Props> = ({ course }) => {
             <Text fontSize={18}> {course?.students}</Text>
           </Flex>
         </Flex>
-        <Button
+        {false && <Button
           color={colors.red}
           fontSize={{base:18, md:24, lg:32}}
           bg={"transparent"}
@@ -96,7 +96,7 @@ const Hero: React.FC<Props> = ({ course }) => {
           mt={3}
         >
           Enroll
-        </Button>
+        </Button>}
       </Stack>
       <Image
         src={course?.image || "/zombie2.webp"}

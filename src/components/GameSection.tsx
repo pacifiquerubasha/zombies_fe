@@ -32,7 +32,7 @@ const GameSection = () => {
                 <Heading as="h2" textAlign={{base:'center', md:'center'}} fontSize={{base:32, md:36}} fontWeight="bold" color={colors.brown} mb={2}>Dive into Epic Adventures!</Heading>
                 <Flex flexWrap="wrap" justifyContent="center" alignItems="center">
                     {shuffledGames.map(game => (
-                        <Box key={game.id} w={48} className="game-card bg-white rounded-lg shadow-md overflow-hidden hover:opacity-75 transition-opacity duration-300" m="2">
+                        <Box data-aos="fade-up" data-aos-easing="ease-in-sine" key={game.id} w={48} className="game-card bg-white rounded-lg shadow-md overflow-hidden hover:opacity-75 transition-opacity duration-300" m="2">
                             <Image src={game.image} alt={game.name} h={40} w={'100%'} objectFit={'cover'} />
                             <Box p="4">
                                 <Heading as="h3" fontSize={22} textAlign={{base:'center', md:'left'}} fontWeight="semibold" mb="2">{game.name}</Heading>
@@ -55,6 +55,7 @@ const GameSection = () => {
                     to={'https://game-teamakatsuki-maurice-webcup.netlify.app/'}
                     target='_blank'
                     _focus={{ outline: 'none' }}
+                    data-aos="fade-up" data-aos-easing="ease-in-sine"
                 >
                     PLAY NOW
                 </Button>
@@ -64,7 +65,7 @@ const GameSection = () => {
                 <Heading as="h3" fontSize={{base:30, md:36}} fontWeight="bold" color="white" mb="4">Advantages of Playing Games for Zombies</Heading>
                 <List color="white">
                     {advantages.map((advantage, index) => (
-                        <ListItem key={index} mb="2" display="flex" alignItems="center">
+                        <ListItem data-aos="fade-up" data-aos-easing="ease-in-sine" key={index} mb="2" display="flex" alignItems="center">
                             <FaCheckCircle className="text-green-500" />
                             <Text ml={2}>{advantage}</Text>
                         </ListItem>

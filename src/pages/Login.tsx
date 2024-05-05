@@ -144,7 +144,7 @@ const Login: React.FC<{}> = ()=>{
                                         {errors.password && errors.password.message}
                                     </FormErrorMessage>
                                 </FormControl>
-                                <Text as={NavLink} to={'/forgot-password'} fontSize={14}>Forgot Password?</Text>
+                                {/* <Text as={NavLink} to={'/forgot-password'} fontSize={14}>Forgot Password?</Text> */}
                                 <Button type='submit' isLoading={isSubmitting} w={'100%'} px={10} py={5} mt={5} color={colors.black} bg={colors.darkbrown}>LOGIN</Button>                               
 
                         </form>

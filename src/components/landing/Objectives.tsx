@@ -202,7 +202,7 @@ const Objectives = () => {
                 >
                   Gain Employment
                 </Text>
-                <Text w={"50%"}>
+                <Text w={"50%"} >
                   Develop much-needed professional skills for workplace success.
                 </Text>
               </Stack>

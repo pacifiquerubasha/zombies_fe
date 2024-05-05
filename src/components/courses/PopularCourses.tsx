@@ -62,7 +62,7 @@ const PopularCourses: React.FC<Props> = ({ data, coursesRef }) => {
       gap={'2.5%'}
     >
       <Stack flex={1}>
-        <Text fontSize={{base:32, md:36}} textAlign={{base:"center", md:"left"}}>Popular Courses</Text>
+        <Text data-aos="fade-up" data-aos-easing="ease-in-sine" fontSize={{base:32, md:36}} textAlign={{base:"center", md:"left"}}>Popular Courses</Text>
         <Wrap color={"rgba(255, 255, 255, 0.5)"} overflow={"hidden"} justify={{base:"center", md:'space-between'}}>
           {data.map((course: any, i: number) => (
             <Box w={{base:"100%", md:"45%", lg:"30%"}} key={i} h={"100%"} mx={{base:"auto", md:"unset"}}>
@@ -73,7 +73,7 @@ const PopularCourses: React.FC<Props> = ({ data, coursesRef }) => {
       </Stack>
 
       <Stack mx={{base:"auto", xl:"unset"}} mt={{base:10, xl:0}} w={400} maxW={'100%'} bg={colors.black} p={10} borderRadius={10}>
-        <Text fontSize={18} mb={2}>
+        <Text data-aos="fade-up" data-aos-easing="ease-in-sine" fontSize={18} mb={2}>
           Resurrection Checkpoints
         </Text>
         <Stepper
@@ -84,7 +84,7 @@ const PopularCourses: React.FC<Props> = ({ data, coursesRef }) => {
           colorScheme="red"
         >
           {steps.map((step, index) => (
-            <Step key={index}>
+            <Step key={index} data-aos="fade-up" data-aos-easing="ease-in-sine">
               <StepIndicator>
                 <StepStatus
                   complete={<StepIcon />}

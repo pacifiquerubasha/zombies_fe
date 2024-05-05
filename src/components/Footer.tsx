@@ -39,12 +39,12 @@ const Footer = () => {
               fontSize={{ base: 18, md: 24, lg: 32 }}
               color={colors.brown}
               fontWeight={900}
-              
+              data-aos="fade-up" data-aos-easing="ease-in-sine"
             >
               Humanize
             </Text>
           </Flex>
-          <Text fontSize={18} w={"80%"}>
+          <Text data-aos="fade-up" data-aos-easing="ease-in-sine" fontSize={18} w={"80%"}>
           Bringing Zombies and Humans Together for a More Unified Society
           </Text>
           <Text mt={5} fontSize={28}>
@@ -85,13 +85,13 @@ const Footer = () => {
             Quick Links
           </Text>
           <Stack fontSize={16} gap={5}>
-            <Text as={NavLink} to={"/courses"}>
+            <Text data-aos="fade-up" data-aos-easing="ease-in-sine" as={NavLink} to={"/courses"}>
               Courses
             </Text>
-            <Text as={NavLink} to={"/additional-resources"}>
+            <Text data-aos="fade-up" data-aos-easing="ease-in-sine" as={NavLink} to={"/additional-resources"}>
               Resources
             </Text>
-            <Text as={NavLink} to={"/personnal-space"}>
+            <Text data-aos="fade-up" data-aos-easing="ease-in-sine" as={NavLink} to={"/personnal-space"}>
               Personal space
             </Text>
           </Stack>
@@ -101,7 +101,7 @@ const Footer = () => {
           <Text fontSize={{base:20, md:24, lg:28}} fontWeight={700}>
             Contact Info
           </Text>
-          <Flex fontSize={16} gap={5} align={"center"}>
+          <Flex data-aos="fade-up" data-aos-easing="ease-in-sine" fontSize={16} gap={5} align={"center"}>
             <FiPhoneCall fontSize={32} />
             <Stack gap={0}>
               <Text>Phone Number</Text>
@@ -110,14 +110,14 @@ const Footer = () => {
               </Text>
             </Stack>
           </Flex>
-          <Flex fontSize={16} gap={5} align={"center"}>
+          <Flex data-aos="fade-up" data-aos-easing="ease-in-sine" fontSize={16} gap={5} align={"center"}>
             <MdOutlineLocationOn fontSize={32} />
             <Stack gap={0}>
               <Text>Address</Text>
               <Text color={colors.brown}>Pamplemousses</Text>
             </Stack>
           </Flex>
-          <Flex align={"center"} gap={5}>
+          <Flex data-aos="fade-up" data-aos-easing="ease-in-sine" align={"center"} gap={5}>
             <Flex
               align={"center"}
               justify={"center"}

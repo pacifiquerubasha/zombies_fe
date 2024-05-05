@@ -32,9 +32,9 @@ const PersonalSpace = () => {
         <Stack overflow={'hidden'} className="bg-white/10 col-span-9 rounded-lg p-6" pl={{base:0, md:'5%'}}>
           
           <Box id="user-info" mb={8} w={'100%'} >
-            <Text fontSize={{base:20, md:24, lg:30}} fontWeight="bold" py={4} textTransform="uppercase">User Information</Text>
+            <Text data-aos="fade-up" data-aos-easing="ease-in-sine" fontSize={{base:20, md:24, lg:30}} fontWeight="bold" py={4} textTransform="uppercase">User Information</Text>
             <Flex alignItems="center" mb={4}>
-              <Box rounded="full" mr={4}>
+              <Box data-aos="fade-right" data-aos-easing="ease-in-sine" rounded="full" mr={4}>
                 <Avatar
                   src={user?.imageUrl || ""}
                   name={user?.userName}
@@ -42,7 +42,7 @@ const PersonalSpace = () => {
                   loading="lazy"
                 />
               </Box>
-              <Box>
+              <Box data-aos="fade-left" data-aos-easing="ease-in-sine">
                 <Text fontSize="lg" fontWeight="bold">{user?.userName}</Text>
                 <Text fontSize={{base:14, md:16}} color="gray.400">{user?.email}</Text>
                 <Badge colorScheme={user?.isVerified ? "green": "red"}>{user?.isVerified ? "Active": "Unverified"}</Badge>

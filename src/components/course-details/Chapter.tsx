@@ -37,7 +37,8 @@ const Chapter:React.FC<Props> = ({chapter, isLast, course}) => {
 
     const {isOpen, onOpen, onClose} = useDisclosure();
     const clickDownload = ()=>{
-        if(!user) onOpen()
+        console.log("USER", user)
+        if(!user) onOpen();
         else handleGenerateCertificate();
     }
 
@@ -79,7 +80,7 @@ const Chapter:React.FC<Props> = ({chapter, isLast, course}) => {
                 
             </List>
 
-            {isLast &&
+            {false &&
             <>
             <Button
                 color={colors.red}
