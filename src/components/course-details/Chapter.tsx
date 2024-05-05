@@ -12,7 +12,7 @@ interface Props{
     course: any
 }
 
-const Chapter:React.FC<Props> = ({chapter, isLast, course}) => {
+const Chapter:React.FC<Props> = ({chapter, course}) => {
 
     const {user} = useContext(AppContext);
     const toast = useToast();
