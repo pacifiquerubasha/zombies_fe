@@ -12,7 +12,7 @@ interface Props{
 
 const Layout:React.FC<Props> = ({children}) => {
 
-  const {user, setUser} = useContext(AppContext);
+  const { setUser} = useContext(AppContext);
   
   const [isLoaded, setIsLoaded] = useState(false);
   const fetchUser = async(id:string)=>{

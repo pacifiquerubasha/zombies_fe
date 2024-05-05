@@ -1,14 +1,46 @@
-import { Box, Button, List, ListIcon, ListItem, Stack, Text } from '@chakra-ui/react';
-import React from 'react';
+import { Box, Button, List, ListIcon, ListItem, Stack, Text, useDisclosure, useToast } from '@chakra-ui/react';
+import React, { useContext } from 'react';
 import { colors } from '../../assets/colors';
 import { MdSettings } from 'react-icons/md';
+import { AppContext } from '../../AppContext';
+import { generateCertificate } from '../../services/others';
+import LoginModal from '../LoginModal';
 
 interface Props{
     chapter:any,
-    isLast: boolean
+    isLast: boolean,
+    course: any
 }
 
-const Chapter:React.FC<Props> = ({chapter, isLast}) => {
+const Chapter:React.FC<Props> = ({chapter, isLast, course}) => {
+
+    const {user} = useContext(AppContext);
+    const toast = useToast();
+
+    const handleGenerateCertificate = async()=>{
+        try {
+            const response = await generateCertificate(user?.userName, course?.title);
+            if(response.data){
+                console.log(response.data);
+                toast({
+                    title: "Certificate generated",
+                    description: "Your certificate has been generated successfully. You can download it from the link below.",
+                    status: "success",
+                    duration: 9000,
+                    isClosable: true,
+                })
+            }
+        } catch (error) {
+            console.log(error);            
+        }
+    }
+
+    const {isOpen, onOpen, onClose} = useDisclosure();
+    const clickDownload = ()=>{
+        if(!user) onOpen()
+        else handleGenerateCertificate();
+    }
+
     return (
         <Stack >
             <Text>
@@ -48,6 +80,7 @@ const Chapter:React.FC<Props> = ({chapter, isLast}) => {
             </List>
 
             {isLast &&
+            <>
             <Button
                 color={colors.red}
                 fontSize={{base:18, md:24, lg:32}}
@@ -59,9 +92,18 @@ const Chapter:React.FC<Props> = ({chapter, isLast}) => {
                 _hover={{ bg: colors.black }}
                 my={5}
                 mr={'auto'}
+                onClick={clickDownload}
             >
-                Generate certificate
-            </Button>}
+                Get certificate
+            </Button>
+            <LoginModal
+                isOpen={isOpen}
+                onClose={onClose}
+                info={"Please login to download your certificate."}
+            />
+            </>
+            }
+
             
         </Stack>
     );

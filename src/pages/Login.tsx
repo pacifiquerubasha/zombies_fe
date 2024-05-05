@@ -1,11 +1,10 @@
 import { Badge, Box, Button, Flex, FormControl, FormErrorMessage, FormLabel, Image, Input, InputGroup, InputLeftElement, InputRightElement, Stack, Text, useToast } from '@chakra-ui/react';
-import React, { useContext } from 'react';
+import React from 'react';
 import { colors } from '../assets/colors';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { ImEye, ImEyeBlocked, ImKey, ImUser } from 'react-icons/im';
+import { ImEye, ImEyeBlocked, ImKey, } from 'react-icons/im';
 import { useForm } from 'react-hook-form';
 import { login } from '../services/auth';
-import { AppContext } from '../AppContext';
 import axios from 'axios';
 import { LuAtSign } from 'react-icons/lu';
 
@@ -16,7 +15,6 @@ interface LoginData {
 
 const Login: React.FC<{}> = ()=>{
 
-    const {setUser} = useContext(AppContext);
 
     const toast = useToast();
     const navigate = useNavigate();

@@ -1,6 +1,5 @@
 import { Box, Flex, Image, Stack, Text } from "@chakra-ui/react";
-import React from "react";
-import { FaRegFilePdf } from "react-icons/fa";
+
 import { colors } from "../../assets/colors";
 
 const Objectives = () => {

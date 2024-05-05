@@ -19,10 +19,9 @@ import {
 import React from "react";
 import { colors } from "../assets/colors";
 import { NavLink, useNavigate } from "react-router-dom";
-import { ImEye, ImEyeBlocked, ImKey, ImUser } from "react-icons/im";
+import { ImEye, ImEyeBlocked, ImKey } from "react-icons/im";
 import { useForm } from "react-hook-form";
-import { FaEnvelope, FaLocationPin } from "react-icons/fa6";
-import { FaPhoneAlt } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa6";
 import { LuAtSign } from "react-icons/lu";
 import { register as signup } from "../services/auth";
 import { Select } from "chakra-react-select";

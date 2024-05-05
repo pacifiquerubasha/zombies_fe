@@ -43,6 +43,7 @@ const Course: React.FC<Props> = ({ course }) => {
                 <Chapter
                   isLast={i + 1 === course?.chapters?.length}
                   chapter={chapter}
+                  course={course}
                 />
               </AccordionPanel>
             </AccordionItem>

@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Layout from '../components/Layout';
-import { Flex } from '@chakra-ui/react';
 import Hero from '../components/course-details/Hero';
 import WhatsIncluded from '../components/course-details/WhatsIncluded';
 import Course from '../components/course-details/Course';
