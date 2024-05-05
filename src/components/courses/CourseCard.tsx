@@ -27,6 +27,7 @@ const CourseCard:React.FC<CourseProps> = ({course}) => {
                     width={"100%"}
                     height={200}
                     objectFit={"cover"}
+                    objectPosition={'top'}
                     borderRadius={16}
                 />
                 <Text fontSize={12} pos={'absolute'} bottom={2} left={2} bg={colors.black} color={colors.brown} py={1} px={2} borderRadius={5}>{course.tags[0]}</Text>

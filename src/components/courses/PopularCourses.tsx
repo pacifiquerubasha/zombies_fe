@@ -59,6 +59,7 @@ const PopularCourses: React.FC<Props> = ({ data, coursesRef }) => {
       px={{ base: "5%"}}
       flexDir={{base:'column', xl:'row'}}
       ref={coursesRef}
+      gap={'2.5%'}
     >
       <Stack flex={1}>
         <Text fontSize={{base:32, md:36}} textAlign={{base:"center", md:"left"}}>Popular Courses</Text>

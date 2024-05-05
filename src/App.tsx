@@ -6,6 +6,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css';
 import { AppContext } from './AppContext'
 import { Spinner, Stack } from '@chakra-ui/react'
+import { colors } from './assets/colors'
 const Resources = React.lazy(() => import('./pages/Resources'));
 const Courses = React.lazy(() => import('./pages/Courses'));
 const CourseDetails = React.lazy(() => import('./pages/CourseDetails'));
@@ -48,8 +49,8 @@ function App() {
 
   const FallBack = () => {
     return (
-      <Stack w={'100%'} h={'100vh'} justify={'center'} align={'center'}>
-        <Spinner size={'xl'}/>
+      <Stack color={colors.black} w={'100%'} h={'100vh'} justify={'center'} align={'center'}>
+        <Spinner size={'xl'} colorScheme='red'/>
       </Stack>
     )
   }

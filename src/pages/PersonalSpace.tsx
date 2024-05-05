@@ -1,11 +1,13 @@
-import { useContext, useEffect } from 'react';
+import { lazy, useContext, useEffect } from 'react';
 import { Avatar, Badge, Box, Button, Flex, Stack, Text, useDisclosure } from '@chakra-ui/react';
 import Layout from '../components/Layout';
 import { colors } from '../assets/colors';
 import { AppContext } from '../AppContext';
 import { useNavigate } from 'react-router-dom';
-import LogoutAlert from '../components/LogoutAlert';
-import GameSection from '../components/GameSection';
+
+
+const LogoutAlert = lazy(() => import('../components/LogoutAlert'));
+const GameSection = lazy(() => import('../components/GameSection'));
 
 
 const PersonalSpace = () => {
@@ -27,10 +29,10 @@ const PersonalSpace = () => {
     <Layout>
       <Flex minH={'100vh'} pos={'relative'} py={4} pt={{base:"15vh", md:"20vh"}} color={colors.brown} px={{base:'5%', md:'10%'}}>
 
-        <Stack className="bg-white/10 col-span-9 rounded-lg p-6" flex="1" pl={'5%'}>
+        <Stack overflow={'hidden'} className="bg-white/10 col-span-9 rounded-lg p-6" pl={{base:0, md:'5%'}}>
           
-          <Box id="user-info" mb={8}>
-            <Text fontSize={30} fontWeight="bold" py={4} textTransform="uppercase">User Information</Text>
+          <Box id="user-info" mb={8} w={'100%'} >
+            <Text fontSize={{base:20, md:24, lg:30}} fontWeight="bold" py={4} textTransform="uppercase">User Information</Text>
             <Flex alignItems="center" mb={4}>
               <Box rounded="full" mr={4}>
                 <Avatar
@@ -42,7 +44,7 @@ const PersonalSpace = () => {
               </Box>
               <Box>
                 <Text fontSize="lg" fontWeight="bold">{user?.userName}</Text>
-                <Text color="gray.400">{user?.email}</Text>
+                <Text fontSize={{base:14, md:16}} color="gray.400">{user?.email}</Text>
                 <Badge colorScheme={user?.isVerified ? "green": "red"}>{user?.isVerified ? "Active": "Unverified"}</Badge>
               </Box>
             </Flex>

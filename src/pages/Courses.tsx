@@ -1,9 +1,11 @@
 import Layout from '../components/Layout';
-import Hero from '../components/courses/Hero';
-import PopularCourses from '../components/courses/PopularCourses';
-import OtherCourses from '../components/courses/OtherCourses';
+
 import { courses_data } from '../utils/courses_data';
-import { useRef } from 'react';
+import { lazy, useRef } from 'react';
+
+const Hero = lazy(() => import('../components/courses/Hero'));
+const PopularCourses = lazy(() => import('../components/courses/PopularCourses'));
+const OtherCourses = lazy(() => import('../components/courses/OtherCourses'));
 
 const Courses = () => {
 

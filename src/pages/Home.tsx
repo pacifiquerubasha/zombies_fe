@@ -1,17 +1,18 @@
 
 import React from "react";
-import Objectives from "../components/landing/Objectives";
-import Hero from "../components/landing/Hero";
-import Intro from "../components/landing/Intro";
-import SampleCourses from "../components/landing/SampleCourses";
 import Layout from "../components/Layout";
-import Testimonials from "../components/landing/Testimonials";
-import CTA from "../components/landing/CTA";
+const Hero = React.lazy(() => import("../components/landing/Hero"));
+const Intro = React.lazy(() => import("../components/landing/Intro"));
+const Objectives = React.lazy(() => import("../components/landing/Objectives"));
+const SampleCourses = React.lazy(() => import("../components/landing/SampleCourses"));
+const CTA = React.lazy(() => import("../components/landing/CTA"));
+const Testimonials = React.lazy(() => import("../components/landing/Testimonials"));
+
 
 const Home: React.FC<{}> = () => {
   return (
     <Layout>
-
+      
       <Hero/>
       <Intro/>
       <Objectives />

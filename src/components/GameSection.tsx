@@ -1,6 +1,7 @@
 import { FaCheckCircle } from 'react-icons/fa';
 import { Box, Button, Flex, Heading, Image, List, ListItem, Stack, Text } from '@chakra-ui/react';
 import { colors } from '../assets/colors';
+import { NavLink } from 'react-router-dom';
 
 const GameSection = () => {
     const games = [
@@ -18,28 +19,24 @@ const GameSection = () => {
     ];
 
     const backgroundImageUrl = 'https://i.pinimg.com/originals/50/35/0b/50350b816f1c95e02c30e08ce222a014.jpg'; // Replace with your online image URL
-    const blurRadius = '5px'; // Adjust blur strength as desired
+    const blurRadius = '5px'; 
 
-    // Display only the three fixed games
     const shuffledGames = games;
 
-    const handlePlayNowClick = () => {
-        window.location.href = 'https://teamakatsuki.maurice.webcup.hodi.host/games/';
-    };
-
+   
     return (
         <Stack position="relative" rounded="lg" shadow="md" overflow="hidden" isolation={'isolate'}>
             <Box position="absolute" inset="0" w={'100%'} h={'100%'} border={'1px solid red'} bgImage={`url(${backgroundImageUrl})`} bgSize="cover" bgPosition="center" filter={`blur(${blurRadius})`} zIndex="-1"></Box>
             <Box position="absolute" inset="0" bg="black" opacity="0.5"></Box>
             <Box position="relative" display="flex" flexDirection="column" justifyContent="center" alignItems="center" color="white" p="8">
-                <Heading as="h2" size="3xl" fontWeight="bold" color={colors.brown} mb={2}>Dive into Epic Adventures!</Heading>
+                <Heading as="h2" textAlign={{base:'center', md:'center'}} fontSize={{base:32, md:36}} fontWeight="bold" color={colors.brown} mb={2}>Dive into Epic Adventures!</Heading>
                 <Flex flexWrap="wrap" justifyContent="center" alignItems="center">
                     {shuffledGames.map(game => (
                         <Box key={game.id} w={48} className="game-card bg-white rounded-lg shadow-md overflow-hidden hover:opacity-75 transition-opacity duration-300" m="2">
                             <Image src={game.image} alt={game.name} h={40} w={'100%'} objectFit={'cover'} />
                             <Box p="4">
-                                <Heading as="h3" fontSize={22} fontWeight="semibold" mb="2">{game.name}</Heading>
-                                <Text fontSize={16} className="text-gray-700">{game.description}</Text>
+                                <Heading as="h3" fontSize={22} textAlign={{base:'center', md:'left'}} fontWeight="semibold" mb="2">{game.name}</Heading>
+                                <Text fontSize={16} textAlign={{base:'center', md:'left'}} className="text-gray-700">{game.description}</Text>
                             </Box>
                         </Box>
                     ))}
@@ -54,7 +51,9 @@ const GameSection = () => {
                     rounded="full"
                     
                     fontSize="xl"
-                    onClick={handlePlayNowClick}
+                    as={NavLink}
+                    to={'https://game-teamakatsuki-maurice-webcup.netlify.app/'}
+                    target='_blank'
                     _focus={{ outline: 'none' }}
                 >
                     PLAY NOW

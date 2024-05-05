@@ -45,8 +45,7 @@ const Footer = () => {
             </Text>
           </Flex>
           <Text fontSize={18} w={"80%"}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac
-            vehicula ligula
+          Bringing Zombies and Humans Together for a More Unified Society
           </Text>
           <Text mt={5} fontSize={28}>
             Subscribe Now

@@ -7,7 +7,7 @@ export const courses_data =[
       rating: 4.2,
       students: 357,
       cpu: 4,
-      image: "/zombie2.webp",
+      image: "/zombie5.webp",
       shortDesc: `Mastering the 9-5 human herd mentality without arousing mass hysteria.`,
       longDesc: `Seamlessly integrate into the human workforce by adopting the mindset and behaviors of the living corporate drone. Learn to suppress your undead impulses, mimic human office rituals, and navigate the treacherous politics of the open-plan ecosystem without raising alarms.`,
       included: [
@@ -50,7 +50,7 @@ export const courses_data =[
       rating: 4.8,
       students: 622,
       cpu: 3,
-      image: "/zombie2.webp",
+      image: "/zombie6.webp",
       shortDesc: `The secrets to blending in during human cerebral engagements.`,
       longDesc: `Don't be a brain-dead member of the unliving undead - polish your social decorum and unearth the mystifying rules of human interaction. This course is your sovereign panacea for navigating awkward introductions, maintaining riveting dead conversations, and resisting the temptation to feast during black-tie affairs.`,
       included: [
@@ -94,7 +94,7 @@ export const courses_data =[
         rating: 4.5,
         students: 418,
         cpu: 4,
-        image: "/zombie2.webp",
+        image: "/zombie7.webp",
         shortDesc: `Unlock the puzzling mysteries of human arts and entertainment.`,
         longDesc: `The living's obsession with peculiar cultureglyphs can befuddle even the most sapient of the undead. This intensive training simulation will immerse you in human creative works, enabling you to decipher pop songs, interpret modern art, and appreciate the depth of dramatic human sagas without dissolving into a brain-craving frenzy.`,
         included: [
@@ -137,7 +137,7 @@ export const courses_data =[
         rating: 4.7,
         students: 275,
         cpu: 5,
-        image: "/zombie2.webp", 
+        image: "/zombie8.webp", 
         shortDesc: `Silencing the incessant hum of your inner necro-savage.`,
         longDesc: `Even the most reformed of reanimated beings can struggle with repressing primordial urges to dismember, devour, or engage in other unlawful activities. This intensive neurological reprogramming will forcefully overwrite your degenerative zombie franken-codings, restoring full mental sovereignty over your baser impulses.`,
         included: [
@@ -180,7 +180,7 @@ export const courses_data =[
         rating: 3.9,
         students: 537,
         cpu: 2,
-        image: "/zombie2.webp",
+        image: "/zombie9.webp",
         shortDesc: `Resist painting the town red when human hematocrits flow freely.`,
         longDesc: `The wafting aroma of freshly spilled human blood can incite a berserker rampage in even the most mild-mannered of the reanimated. This emergency preparedness program equips you with cognitive restraint holds and environmental decontamination protocols to maintain restraint when confronted with sanguine temptation.`, 
         included: [

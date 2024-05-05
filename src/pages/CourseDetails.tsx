@@ -1,10 +1,12 @@
-import { useEffect, useState } from 'react';
+import { lazy, useEffect, useState } from 'react';
 import Layout from '../components/Layout';
-import Hero from '../components/course-details/Hero';
-import WhatsIncluded from '../components/course-details/WhatsIncluded';
-import Course from '../components/course-details/Course';
+
 import { useParams } from 'react-router-dom';
 import { courses_data } from '../utils/courses_data';
+
+const Hero = lazy(() => import('../components/course-details/Hero'));
+const WhatsIncluded = lazy(() => import('../components/course-details/WhatsIncluded'));
+const Course = lazy(() => import('../components/course-details/Course'));
 
 const CourseDetails = () => {
     const {id} = useParams();

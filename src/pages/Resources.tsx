@@ -1,8 +1,11 @@
 import { Stack, Text } from "@chakra-ui/react";
 import { colors } from "../assets/colors";
 import Layout from "../components/Layout";
-import Featured from "../components/resources/Featured";
-import ResourceList from "../components/resources/ResourceList";
+import { lazy } from "react";
+
+const Featured = lazy(() => import('../components/resources/Featured'));
+const ResourceList = lazy(() => import('../components/resources/ResourceList'));
+
 
 const Resources = () => {
   return (
